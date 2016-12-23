@@ -1,5 +1,7 @@
+/* Mediaqueries mixins */
 /* Color variables */
 /* Font variables */
+/* Mediaqueries */
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -11,38 +13,57 @@ body {
   font-size: 16px;
   color: #000; }
 
+li {
+  list-style: none; }
+
 .user-top-bar {
   position: flex;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: 80px;
+  height: 20%;
   background: #7477bf;
   color: #fff; }
+  @media (min-width: 768px) {
+    .user-top-bar {
+      flex-direction: row;
+      justify-content: space-between; } }
 
 .app-logo {
   display: block;
-  margin-right: auto;
   margin-left: 2%;
   font-size: 2em; }
 
-.bell-icon {
-  width: 1.7rem; }
-
-.sullivan-profile {
+.user-profile {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: 100%;
   height: 50px;
-  border-left: 1px solid #5d61bf;
   margin-left: 1.6em;
   margin-right: 1em; }
+  @media (min-width: 768px) {
+    .user-profile {
+      width: 40%; } }
+  @media (min-width: 1024px) {
+    .user-profile {
+      width: 20%;
+      margin-right: 0; } }
 
-.sullivan-picture {
+.user-profile li:nth-child(2) {
+  border-left: 1px solid #5d61bf;
+  padding-left: 1em; }
+
+.bell-icon {
+  width: 1.7rem;
+  margin-right: 2.5em; }
+
+.user-picture {
   width: 2rem;
   border-radius: 100%;
   margin-left: 1em;
