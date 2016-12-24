@@ -4,7 +4,7 @@
 
 body {
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	background: $white;
 	font-family: $titillium;
 	font-size: 16px;
@@ -15,7 +15,12 @@ li {
 	list-style: none;
 }
 
-
+.content-container {
+	display: flex;
+	flex-direction: row;
+	flex-basis: 100%;
+	height: 100vh;
+}
 
 
 
