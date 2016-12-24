@@ -7,7 +7,7 @@
 
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: #fff;
   font-family: "Titillium Web", sans-serif;
   font-size: 16px;
@@ -17,15 +17,11 @@ li {
   list-style: none; }
 
 .user-top-bar {
-  position: flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  flex-basis: 100%;
   height: 20%;
   background: #7477bf;
   color: #fff; }
@@ -52,7 +48,7 @@ li {
       width: 40%; } }
   @media (min-width: 1024px) {
     .user-profile {
-      width: 20%;
+      width: 25%;
       margin-right: 0; } }
 
 .user-profile li:nth-child(2) {
