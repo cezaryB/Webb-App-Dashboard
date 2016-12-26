@@ -16,6 +16,17 @@ body {
 li {
   list-style: none; }
 
+h1 {
+  color: #676666; }
+
+h2 {
+  font-size: .9em;
+  color: #676666; }
+
+a {
+  text-decoration: none;
+  color: #676666; }
+
 .content-container {
   display: flex;
   flex-direction: row;
@@ -111,8 +122,7 @@ li {
 .dashboard-container h1 {
   flex-basis: 100%;
   font-size: 1.3em;
-  text-align: center;
-  color: #676666; }
+  text-align: center; }
   @media (min-width: 768px) {
     .dashboard-container h1 {
       flex-basis: 15%;
@@ -184,6 +194,45 @@ li {
       text-align: left; } }
   @media (min-width: 1024px) {
     .alert {
-      padding-top: 1%; } }
+      padding-top: 1%;
+      margin-top: 2%; } }
+
+/* Top traffic section styling */
+.top-traffic-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  flex-basis: 100%; }
+
+.section-name {
+  flex-basis: 100%;
+  opacity: .7; }
+  @media (min-width: 768px) {
+    .section-name {
+      flex-basis: 10%;
+      margin-right: auto;
+      margin-left: 2%; } }
+
+.traffic-period {
+  opacity: .7;
+  margin-left: 3%;
+  margin-right: 3%; }
+  @media (min-width: 1024px) {
+    .traffic-period {
+      margin-left: 2%;
+      margin-right: 2%; } }
+
+@media (min-width: 768px) {
+  .traffic-period:last-child {
+    margin-right: 5%; } }
+
+.active-period {
+  border: 1px solid #00ff99;
+  background: #00ff99;
+  border-radius: 5px;
+  color: #fff;
+  padding-left: 14%;
+  padding-right: 14%; }
 
 /*# sourceMappingURL=style.css.map */

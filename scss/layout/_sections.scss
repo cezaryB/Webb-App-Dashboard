@@ -10,7 +10,6 @@
 	flex-basis: 100%;
 	font-size: 1.3em;
 	text-align: center;
-	color: $text-color;
 	@include tablet {
 		flex-basis: 15%;
 		margin-right: auto;
@@ -89,5 +88,45 @@
 	}
 	@include desktop {
 		padding-top: 1%;
+		margin-top: 2%;
+	}
+}
+
+/* Top traffic section styling */
+
+.top-traffic-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	flex-basis: 100%;
+	@include tablet {
+	}
+
+}
+
+.section-name {
+	flex-basis: 100%;
+	opacity: .7;
+	@include tablet {
+		flex-basis: 10%;
+		margin-right: auto;
+		margin-left: 2%;
+	}
+}
+
+.traffic-period {
+	opacity: .7;
+	margin-left: 3%;
+	margin-right: 3%;
+	@include desktop {
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+}
+
+.traffic-period:last-child {
+	@include tablet {
+		margin-right: 5%;
 	}
 }
