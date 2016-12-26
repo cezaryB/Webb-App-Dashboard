@@ -68,10 +68,12 @@
 /* Alert box styling */
 
 .alert {
+	position: relative;
 	width: 80%;
+	max-width: 1300px;
 	height: 10%;
 	margin-top: 5%;
-	padding-top: 3%;
+	padding-top: 5%;
 	border-radius: 3px;
 	background-color: $main-violet;
 	text-align: center;
@@ -92,6 +94,19 @@
 	}
 }
 
+.close {
+	position: absolute;
+	top: 3%;
+	right: 2%;
+	font-weight: bold;
+	color: $white;
+	@include desktop {
+		right: 1%;
+		top: 25%;
+		font-size: 1.5em;
+	}
+}
+
 /* Top traffic section styling */
 
 .top-traffic-section {
@@ -100,9 +115,7 @@
 	justify-content: center;
 	text-align: center;
 	flex-basis: 100%;
-	@include tablet {
-	}
-
+	max-width: 1300px;
 }
 
 .section-name {
@@ -129,4 +142,14 @@
 	@include tablet {
 		margin-right: 5%;
 	}
+}
+
+.first-chart-container {
+	margin-top: 3%;
+	width: 90%;
+}
+
+canvas {
+	margin-left: auto;
+	margin-right: auto;
 }

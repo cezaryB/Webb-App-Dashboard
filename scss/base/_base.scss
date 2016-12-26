@@ -11,6 +11,7 @@ body {
 	color: $black;
 }
 
+
 li {
 	list-style: none;
 }
@@ -29,6 +30,11 @@ a {
 	color: $text-color;
 }
 
+.whole-page-container {
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
 .content-container {
 	display: flex;
 	flex-direction: row;
@@ -36,5 +42,9 @@ a {
 	height: 100vh;
 }
 
+.chart {
+	max-width: 1300px;
+	max-height: 600px;
+}
 
 

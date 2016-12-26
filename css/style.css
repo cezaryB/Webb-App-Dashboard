@@ -27,11 +27,19 @@ a {
   text-decoration: none;
   color: #676666; }
 
+.whole-page-container {
+  margin: 0 auto;
+  max-width: 1920px; }
+
 .content-container {
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
   height: 100vh; }
+
+.chart {
+  max-width: 1300px;
+  max-height: 600px; }
 
 .user-top-bar {
   display: flex;
@@ -40,13 +48,14 @@ a {
   align-items: center;
   flex-basis: 100%;
   width: 100%;
-  height: 10%;
+  height: 24%;
   background: #7477bf;
   color: #fff; }
   @media (min-width: 768px) {
     .user-top-bar {
       flex-direction: row;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      height: 10%; } }
 
 .app-logo {
   display: block;
@@ -88,6 +97,7 @@ a {
   justify-content: center;
   flex-basis: 10%;
   max-width: 80px;
+  height: 100%;
   background: #4d4c72; }
   @media (min-width: 1024px) {
     .left-vertical-bar {
@@ -174,10 +184,12 @@ a {
 
 /* Alert box styling */
 .alert {
+  position: relative;
   width: 80%;
+  max-width: 1300px;
   height: 10%;
   margin-top: 5%;
-  padding-top: 3%;
+  padding-top: 5%;
   border-radius: 3px;
   background-color: #7477bf;
   text-align: center;
@@ -197,13 +209,26 @@ a {
       padding-top: 1%;
       margin-top: 2%; } }
 
+.close {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  font-weight: bold;
+  color: #fff; }
+  @media (min-width: 1024px) {
+    .close {
+      right: 1%;
+      top: 25%;
+      font-size: 1.5em; } }
+
 /* Top traffic section styling */
 .top-traffic-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  flex-basis: 100%; }
+  flex-basis: 100%;
+  max-width: 1300px; }
 
 .section-name {
   flex-basis: 100%;
@@ -226,6 +251,14 @@ a {
 @media (min-width: 768px) {
   .traffic-period:last-child {
     margin-right: 5%; } }
+
+.first-chart-container {
+  margin-top: 3%;
+  width: 90%; }
+
+canvas {
+  margin-left: auto;
+  margin-right: auto; }
 
 .active-period {
   border: 1px solid #00ff99;

@@ -3,6 +3,7 @@
 	justify-content: center;
 	flex-basis: 10%;
 	max-width: 80px;
+	height: 100%;
 	background: $darker-violet;
 		@include desktop {
 			flex-basis: 6%;
