@@ -1,0 +1,31 @@
+.left-vertical-bar {
+	display: flex;
+	justify-content: center;
+	flex-basis: 10%;
+	max-width: 80px;
+	background: $darker-violet;
+		@include desktop {
+			flex-basis: 6%;
+		}
+}
+
+.vertical-menu {
+	padding: 0;
+	line-height: 2em;
+	@include tablet {
+		line-height: 2.5em;
+	}
+	@include desktop {
+		line-height: 3.5em;
+	}
+}
+
+.vertical-menu-icon {
+	width: 15px;
+		@include tablet {
+			width: 20px;
+		}
+		@include desktop {
+			width: 25px;
+		}
+}

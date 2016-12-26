@@ -1,0 +1,14 @@
+/* Mediaqueries mixins */
+
+@mixin tablet {
+	@media #{$tablet} {
+		@content;
+	}
+}
+
+
+@mixin desktop {
+	@media #{$desktop} {
+		@content;
+	}
+}
