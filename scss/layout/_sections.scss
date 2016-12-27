@@ -120,11 +120,16 @@
 
 .section-name {
 	flex-basis: 100%;
-	opacity: .7;
 	@include tablet {
 		flex-basis: 10%;
 		margin-right: auto;
 		margin-left: 2%;
+	}
+	@include desktop {
+		margin-left: 10%;
+	}
+	@include desktopXL {
+		margin-left: 15%;
 	}
 }
 
@@ -144,12 +149,58 @@
 	}
 }
 
-.first-chart-container {
-	margin-top: 3%;
-	width: 90%;
-}
-
-canvas {
+.chart {
+	max-width: 900px;
+	max-height: 500px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.line-chart-container {
+	flex-basis: 100%;
+	width: 100%;
+	margin-top: 3%;
+	border-bottom: 1px solid $grey-border;
+	@include desktopXL {
+		border: none;
+	}
+}
+
+
+.bar-chart-container {
+	flex-basis: 100%;
+	padding-top: 3%;
+	@include tablet {
+		flex-basis: 50%;
+		max-width: 330px;
+		margin-right: 3%;
+	}
+	@include desktop {
+		max-width: 460px;
+	}
+	@include desktopXL {
+		max-width: 550px;
+	}
+}
+
+.pie-chart-container {
+	flex-basis: 100%;
+	padding-top: 3%;
+	@include tablet {
+		flex-basis: 50%;
+		max-width: 330px;
+		border-left: 1px solid $grey-border;
+	}
+	@include desktop {
+		max-width: 460px;
+		padding-left:  1%;
+	}
+	@include desktopXL {
+		max-width: 550px;
+		border: none;
+	}
+}
+
+.bar-chart, .pie-chart {
+	max-width: 450px;
 }

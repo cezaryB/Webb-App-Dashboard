@@ -12,3 +12,9 @@
 		@content;
 	}
 }
+
+@mixin desktopXL {
+	@media #{$desktopXL} {
+		@content;
+	}
+}
