@@ -112,18 +112,19 @@
 .top-traffic-section {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
-	text-align: center;
 	flex-basis: 100%;
+	justify-content: center;
+	width: 100%;
 	max-width: 1300px;
+	text-align: center;
 }
 
 .section-name {
 	flex-basis: 100%;
+	margin-left: 3%;
 	@include tablet {
 		flex-basis: 10%;
 		margin-right: auto;
-		margin-left: 2%;
 	}
 	@include desktop {
 		margin-left: 10%;
@@ -160,6 +161,7 @@
 	flex-basis: 100%;
 	width: 100%;
 	margin-top: 3%;
+	padding-bottom: 2%;
 	border-bottom: 1px solid $grey-border;
 	@include desktopXL {
 		border: none;
@@ -169,21 +171,33 @@
 
 .bar-chart-container {
 	flex-basis: 100%;
+	width: 100%;
 	padding-top: 3%;
+	padding-bottom: 2%;
 	border-bottom: 1px solid $grey-border;
 	@include tablet {
-		flex-basis: 40%;
+		flex-basis: 50%;
 		max-width: 50%;
 		padding-right: 3%;
 	}
+	@include desktopXL {
+		border: none;
+	}
+}
+
+.bar-chart-container h2 {
+	margin-left: 3%;
+
 }
 
 .pie-chart-container {
 	flex-basis: 100%;
+	width: 100%;
 	padding-top: 3%;
+	padding-bottom: 2%;
 	border-bottom: 1px solid $grey-border;
 	@include tablet {
-		flex-basis: 60%;
+		flex-basis: 50%;
 		max-width: 50%;
 		border-left: 1px solid $grey-border;
 	}
@@ -205,4 +219,48 @@
 		max-width: 250px;
 	}
 }
+
+.social-stats-section {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+}
+
+.social-stats-section ul {
+	flex-basis: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+	border: 1px solid $grey-border;
+	@include tablet {
+		flex-basis: 50%;
+	}
+	@include desktop {
+		flex-basis: 33.3%;
+	}
+}
+
+.social-stats-section {
+	h1 {
+		font-size: 2em;
+		font-weight: normal;
+		margin-right: 8%;
+	}
+	h2 {
+		flex-basis: 100%;
+		margin-left: 3%;
+	}
+	h3 {
+		margin-right: 8%;
+	}
+}
+
+.social_logo {
+	width: 40%;
+	float: left;
+	margin-top: 2%;
+	margin-left: 8%;
+}
+
 
