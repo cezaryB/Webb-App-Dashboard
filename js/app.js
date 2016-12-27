@@ -122,6 +122,7 @@ var dataHourly = {
 var lineChart = new Chart(lineChartPlaceholder, {
     type: 'line',
     data: dataWeekly,
+    responsive: true,
     options: {
     	legend: {
     		display: false,
@@ -130,7 +131,8 @@ var lineChart = new Chart(lineChartPlaceholder, {
     			fontColor: "#d9d9d9",
     			fontSize: 3
     		}	
-    	}
+    	},
+    	responsive: true
     }
 });
 
@@ -139,21 +141,54 @@ var lineChart = new Chart(lineChartPlaceholder, {
 
 var barChartPlaceholder = document.getElementById("barChart");
 
+var dataBarChart = {
+    labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    datasets: [
+        {
+            label: "",
+            backgroundColor: [
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)'
 
-var lineChart = new Chart(barChartPlaceholder, {
-    type: 'line',
-    data: dataWeekly,
+            ],
+            borderColor: [
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)',
+                'rgb(115, 119, 191)'
+                
+            ],
+            borderWidth: 1,
+            data: [50, 75, 150, 100, 200, 225, 75],
+        }
+    ]
+};
+
+var barChart = new Chart(barChartPlaceholder, {
+    type: 'bar',
+    data: dataBarChart,
     options: {
-    	legend: {
-    		display: false,
-    		labels: {
-    			fontFamily: "Titillium Web",
-    			fontColor: "#d9d9d9",
-    			fontSize: 3
-    		}	
-    	}
+        scales: {
+            yAxes: [{
+                stacked: true
+            }]
+        },
+        legend: {
+        	display: false
+        },
+        responsive: true
     }
 });
+
+
 
 
 //PIE CHART
@@ -161,18 +196,45 @@ var lineChart = new Chart(barChartPlaceholder, {
 
 var pieChartPlaceholder = document.getElementById("pieChart");
 
+var dataPieChart = {
+    labels: [
+        "Phones",
+        "Tablets",
+        "Desktop",
+        "Smart TV"
+    ],
+    datasets: [
+        {
+            data: [20, 80, 40, 2],
+            backgroundColor: [
+            	"#81c98f",
+                "#74b1bf",
+                "#7377bf",
+                "#33d6ff"
+            ],
+            hoverBackgroundColor: [
+            	"#81c98f",
+                "#74b1bf",
+                "#7377bf",
+                "#33d6ff"
+            ],
+            borderWidth: 0
+        }]
+};
 
-var lineChart = new Chart(pieChartPlaceholder, {
-    type: 'line',
-    data: dataWeekly,
+
+var pieChart = new Chart(pieChartPlaceholder,{
+    type: 'doughnut',
+    data: dataPieChart,
     options: {
     	legend: {
-    		display: false,
     		labels: {
     			fontFamily: "Titillium Web",
-    			fontColor: "#d9d9d9",
-    			fontSize: 3
+    			fontColor: "#999",
+    			fontSize: 10,
+    			padding: 4
     		}	
-    	}
+    	},
+    	responsive: true
     }
 });

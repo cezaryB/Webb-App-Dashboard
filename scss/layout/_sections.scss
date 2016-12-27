@@ -151,7 +151,7 @@
 
 .chart {
 	max-width: 900px;
-	max-height: 500px;
+	max-height: 400px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -170,37 +170,39 @@
 .bar-chart-container {
 	flex-basis: 100%;
 	padding-top: 3%;
+	border-bottom: 1px solid $grey-border;
 	@include tablet {
-		flex-basis: 50%;
-		max-width: 330px;
-		margin-right: 3%;
-	}
-	@include desktop {
-		max-width: 460px;
-	}
-	@include desktopXL {
-		max-width: 550px;
+		flex-basis: 40%;
+		max-width: 50%;
+		padding-right: 3%;
 	}
 }
 
 .pie-chart-container {
 	flex-basis: 100%;
 	padding-top: 3%;
+	border-bottom: 1px solid $grey-border;
 	@include tablet {
-		flex-basis: 50%;
-		max-width: 330px;
+		flex-basis: 60%;
+		max-width: 50%;
 		border-left: 1px solid $grey-border;
 	}
 	@include desktop {
-		max-width: 460px;
 		padding-left:  1%;
 	}
 	@include desktopXL {
-		max-width: 550px;
 		border: none;
 	}
 }
 
-.bar-chart, .pie-chart {
-	max-width: 450px;
+.pie-chart-container h2 {
+	margin-left: 3%;
 }
+
+.pieChart {
+	max-width: 200px;
+	@include desktop {
+		max-width: 250px;
+	}
+}
+
