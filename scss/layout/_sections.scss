@@ -156,9 +156,6 @@
 	margin-top: 3%;
 	padding-bottom: 2%;
 	border-bottom: 1px solid $grey-border;
-	@include desktopXL {
-		border: none;
-	}
 }
 
 
@@ -172,9 +169,6 @@
 		flex-basis: 50%;
 		max-width: 50%;
 		padding-right: 3%;
-	}
-	@include desktopXL {
-		border: none;
 	}
 }
 
@@ -196,9 +190,6 @@
 	}
 	@include desktop {
 		padding-left:  1%;
-	}
-	@include desktopXL {
-		border: none;
 	}
 }
 
@@ -252,9 +243,6 @@
 	h3 {
 		margin-right: 8%;
 	}
-	@include desktopXL {
-		border: none;
-	}
 }
 
 .social_logo {
@@ -273,8 +261,6 @@
 		flex-basis: 50%;
 		border-right: 1px solid $grey-border;
 		border-bottom: 1px solid $grey-border;
-	}
-	@include desktopXL {
 	}
 }
 
@@ -366,8 +352,6 @@
 	@include tablet {
 		flex-basis: 50%;
 	}
-	@include desktopXL {
-	}
 }
 
 .recent-activity-section h2 {
@@ -402,3 +386,53 @@
 	padding: 2%;
 }
 
+.message-section {
+	max-width: 1300px;
+	flex-basis: 100%;
+}
+
+.message-form {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 7%;
+	font-size: .9em;
+}
+
+.search-field {
+	flex-basis: 90%;
+	margin-bottom: 4%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3% 0;
+	border: 1px solid $grey-border;
+	border-radius: 5px;
+	background: $light-grey;
+}
+
+.message {
+	height: 130px;
+	flex-basis: 90%;
+	margin-bottom: 4%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid $grey-border;
+	border-radius: 5px;
+	background: $light-grey;
+}
+
+.message-form button {
+	flex-basis: 90%;
+	font-family: $titillium;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3% 0;
+	border: 1px solid $darker-violet;
+	border-radius: 5px;
+	background: $darker-violet;
+	color: $white;
+}
+
+.settings-section {
+	flex-basis: 100%;
+}

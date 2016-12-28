@@ -270,9 +270,6 @@ a {
   margin-top: 3%;
   padding-bottom: 2%;
   border-bottom: 1px solid #dfdfdf; }
-  @media (min-width: 1390px) {
-    .line-chart-container {
-      border: none; } }
 
 .bar-chart-container {
   flex-basis: 100%;
@@ -285,9 +282,6 @@ a {
       flex-basis: 50%;
       max-width: 50%;
       padding-right: 3%; } }
-  @media (min-width: 1390px) {
-    .bar-chart-container {
-      border: none; } }
 
 .bar-chart-container h2 {
   margin-left: 3%; }
@@ -306,9 +300,6 @@ a {
   @media (min-width: 1024px) {
     .pie-chart-container {
       padding-left: 1%; } }
-  @media (min-width: 1390px) {
-    .pie-chart-container {
-      border: none; } }
 
 .pie-chart-container h2 {
   margin-left: 3%; }
@@ -353,9 +344,6 @@ a {
         margin-left: 1%; } }
   .social-stats-section h3 {
     margin-right: 8%; }
-  @media (min-width: 1390px) {
-    .social-stats-section {
-      border: none; } }
 
 .social_logo {
   width: 40%;
@@ -470,6 +458,51 @@ a {
 
 .activity-symbol {
   padding: 2%; }
+
+.message-section {
+  max-width: 1300px;
+  flex-basis: 100%; }
+
+.message-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 7%;
+  font-size: .9em; }
+
+.search-field {
+  flex-basis: 90%;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3% 0;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  background: #fbfbfb; }
+
+.message {
+  height: 130px;
+  flex-basis: 90%;
+  margin-bottom: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  background: #fbfbfb; }
+
+.message-form button {
+  flex-basis: 90%;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3% 0;
+  border: 1px solid #4d4c72;
+  border-radius: 5px;
+  background: #4d4c72;
+  color: #fff; }
+
+.settings-section {
+  flex-basis: 100%; }
 
 .active-period {
   border: 1px solid #00ff99;
