@@ -167,7 +167,7 @@
 						<h2>MESSAGE USER</h2>
 						<p class="message-alert">Message was sent to the user!</p>
 						<form class="message-form" action="index.html" method="post">
-							<input class="search-field" id="search" type="text" name="user_name" placeholder="Search for user" />
+							<input class="search-field" list="users" id="userSearch" type="text" name="user_name" placeholder="Search for user" />
 							<textarea id="user-message"class="message" placeholder="Message for user"></textarea>
 							<button id="message-submit" type="reset">SEND</button>
 						</form>
@@ -177,27 +177,27 @@
 							<div class="email-notifications">
 								<span>Send Email Notifications</span>
 								<label class="switch">
-								  <input type="checkbox">
+								  <input id="email-switch" type="checkbox" />
 								  <div class="slider round"></div>
 								</label>
 							</div>
 							<div class="public-profile">
 								<span>Set Profile to Public</span>
 								<label class="switch">
-								  <input type="checkbox" placeholder="ON">
+								  <input id="profile-switch" type="checkbox" />
 								  <div class="slider round"></div>
 								</label>
 							</div>
 							<form class="settings-form" action="index.html" method="post">
-								<select name="user_timezone">
+								<select id="timezone" name="user_timezone">
 									<option value="" selected>Select Timezone</option>
 									<option value="Timezone01">Timezone 01</option>
 									<option value="Timezone02">Timezone 02</option>
 									<option value="Timezone03">Timezone 03</option>
 									<option value="Timezone04">Timezone 04</option>
 								</select>
-								<button type="submit">SAVE</button>
-								<button type="reset">CANCEL</button>
+								<button id="save-button" type="submit">SAVE</button>
+								<button id="reset-button" type="reset">CANCEL</button>
 							</form>
 					</div>
 			</div>

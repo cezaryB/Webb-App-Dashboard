@@ -269,7 +269,7 @@ timePeriodsButtons[3].addEventListener("click", function(event){
 //4. Autocomplete for message field
 
 new autoComplete({
-    selector: '#search',
+    selector: '#userSearch',
     minChars: 1,
     source: function(term, suggest){
         term = term.toLowerCase();
@@ -284,27 +284,78 @@ new autoComplete({
 //5. Prevent Default for message field + information that message  was sent successfuly
 
 var submitButton = document.getElementById("message-submit");
-var searchField = document.getElementById("search");
+var searchField = document.getElementById("userSearch");
 var userMessage = document.getElementById("user-message");
 var messageAlert = document.getElementsByClassName("message-alert")[0];
+var searchFieldValue;
+var userMessageValue;
+
+searchField.addEventListener("keydown", function() {
+    var searchFieldValue = searchField.value;
+    console.log(searchFieldValue);
+});
+
+userMessage.addEventListener("keydown", function() {
+    userMessageValue = userMessage.value;
+    console.log(userMessageValue);
+});
 
 submitButton.addEventListener("click", function(event){
-    var value01 = searchField.value.trim();
-    var value02 = userMessage.value.trim()
-    if (value01 === "") {
+    searchFieldValue = searchField.value;
+    userMessageValue = userMessage.value;
+    if (searchFieldValue == "") {
         event.preventDefault();
         messageAlert.classList.add("show");
+        messageAlert.style.background = "#7477bf";
         messageAlert.innerText = "Choose the user!";
     }
-    else if (value02 === "") {
+    else if (userMessageValue == "") {
         event.preventDefault();
         messageAlert.classList.add("show");
+        messageAlert.style.background = "#7477bf";
         messageAlert.innerText = "Write the message!";
     }
 
     else {
         messageAlert.classList.add("show");
-        messageAlert.innerText("Message was sent to the user");
+        messageAlert.style.background = "#1DE592";
+        messageAlert.innerText = "Message was sent to the user";
     }
 
 });
+
+
+//6. Use local storage to save the settings
+
+var emailNotifications = document.getElementById("email-switch");
+var publicProfile = document.getElementById("profile-switch");
+var timezone = document.getElementById("timezone");
+var saveButton = document.getElementById("save-button");
+
+saveButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    localStorage.setItem("email", emailNotifications.checked);
+    localStorage.setItem("profile", publicProfile.checked);
+    localStorage.setItem("timezone", timezone.value);
+});
+
+function load() {
+    var checked01 = JSON.parse(localStorage.getItem("email"));
+    emailNotifications.checked = checked01;
+    var checked02 = JSON.parse(localStorage.getItem("profile"));
+    publicProfile.checked = checked02;
+    timezone.value = localStorage.getItem("timezone");
+}
+
+load();
+
+//7. Clear local storage and setting when button "reset" is pressed
+
+var resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener("click", function(){
+    location.reload();
+    localStorage.clear()
+    emailNotifications.checked = false;
+    publicProfile.checked = false;
+})
