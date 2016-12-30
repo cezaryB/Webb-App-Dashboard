@@ -25,7 +25,7 @@
 
 .search-box-section {
 	display: flex;
-	height: 10%;
+	height: 2%;
 	@include tablet {
 		flex-basis: 83%;
 	}
@@ -71,9 +71,9 @@
 	position: relative;
 	width: 80%;
 	max-width: 1300px;
-	height: 10%;
+	height: 2%;
 	margin-top: 5%;
-	padding-top: 5%;
+	padding-top: 6%;
 	border-radius: 3px;
 	background-color: $main-violet;
 	text-align: center;
@@ -81,7 +81,7 @@
 	color: $white;
 	@include tablet {
 		width: 90%;
-		height: 5%;
+		height: 1.5%;
 		margin-top: 1%;
 		padding-top: 2%;
 		padding-left: 1%;
@@ -152,7 +152,6 @@
 
 .line-chart-container {
 	flex-basis: 100%;
-	width: 100%;
 	margin-top: 3%;
 	padding-bottom: 2%;
 	border-bottom: 1px solid $grey-border;
@@ -195,6 +194,9 @@
 
 .pie-chart-container h2 {
 	margin-left: 3%;
+	@include tablet {
+		margin-left: 5%;
+	}
 }
 
 .pieChart {
@@ -257,8 +259,11 @@
 	max-width: 650px;
 	margin-top: 2%;
 	border-top: 1px solid $grey-border;
+	padding-left: 2%;
 	@include tablet {
 		flex-basis: 50%;
+		padding-left: 2%;
+		padding-right: 1%;
 		border-right: 1px solid $grey-border;
 		border-bottom: 1px solid $grey-border;
 	}
@@ -270,6 +275,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 95%;
+	height: 100px;
 	border-bottom: 1px solid $grey-border;
 	margin: 0 auto;
 	padding-bottom: 5%;
@@ -347,16 +353,18 @@
 	width: 100%;
 	max-width: 650px;
 	margin-top: 2%;
+	padding-left: 2%;
 	border-bottom: 1px solid $grey-border;
 	border-top: 1px solid $grey-border;
 	@include tablet {
 		flex-basis: 50%;
+		padding-left: 1%;
 	}
 }
 
 .recent-activity-section h2 {
 	@include tablet {
-		margin-left: 2%;
+		margin-left: 5%;
 	}
 }
 
@@ -387,15 +395,43 @@
 }
 
 .message-section {
-	max-width: 1300px;
+	max-width: 650px;
 	flex-basis: 100%;
+	position: relative;
+	padding-left: 2%;
+	border-bottom: 1px solid $grey-border;
+	padding-bottom: 4%;
+	@include tablet {
+		height: 350px;
+		flex-basis: 50%;
+		padding-left: 2%;
+		border-right: 1px solid $grey-border;
+	}
+	@include desktop {
+		height: 500px;
+	}
+}
+
+.message-alert {
+	visibility: hidden;
+	position: absolute;
+	top: 5%;
+	padding: 0 2%;
+	background: $light-green;
+	border: 1px solid $light-green;
+	border-radius: 5px;
+	font-size: .9em;
+	color: $white;
 }
 
 .message-form {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 7%;
-	font-size: .9em;
+	font-size: .8em;
+	@include tablet {
+		margin-right: 10%;
+	}
 }
 
 .search-field {
@@ -403,7 +439,7 @@
 	margin-bottom: 4%;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 3% 0;
+	padding: 3% 3%;
 	border: 1px solid $grey-border;
 	border-radius: 5px;
 	background: $light-grey;
@@ -412,27 +448,160 @@
 .message {
 	height: 130px;
 	flex-basis: 90%;
-	margin-bottom: 4%;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 3% 3%;
 	border: 1px solid $grey-border;
 	border-radius: 5px;
 	background: $light-grey;
+	@include desktop {
+		height: 160px;
+	}
 }
 
 .message-form button {
 	flex-basis: 90%;
 	font-family: $titillium;
-	font-weight: bold;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 3%;
 	padding: 3% 0;
-	border: 1px solid $darker-violet;
+	border: 1px solid $main-violet;
 	border-radius: 5px;
-	background: $darker-violet;
+	background: $main-violet;
 	color: $white;
+	@include tablet {
+		margin-top: 7%;
+	}
 }
 
 .settings-section {
 	flex-basis: 100%;
+	max-width: 650px;
+	margin-bottom: 20%;
+	padding-left: 2%;
+	@include tablet {
+		height: 350px;
+		flex-basis: 50%;
+		padding-left: 1%;
+		border-bottom: 1px solid $grey-border;
+	}
+	@include desktop {
+		height: 500px;
+	}
+}
+
+
+.settings-section h2 {
+	@include tablet {
+		margin-left: 5%;
+	}
+}
+
+.email-notifications {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 7%;
+	span {
+		align-self: center;
+		margin-right: auto;
+		font-size: 0.9em;
+		@include tablet {
+			margin-left: 6%;
+		}
+	}
+	.switch {
+		margin-right: 10%;
+		@include tablet {
+			margin-right: 25%;
+		}
+		@include desktop {
+			margin-right: 40%;
+		}
+		@include desktopXL {
+			margin-right: 50%;
+		}
+	}
+	@include desktop {
+		margin-top: 5%;
+	}
+}
+
+.public-profile {
+	display: flex;
+	justify-content: flex-start;
+	span {
+		align-self: center;
+		margin-right: auto;
+		font-size: 0.9em;
+		@include tablet {
+			margin-left: 6%;
+		}
+	}
+	.switch {
+		margin-right: 10%;
+		@include tablet {
+			margin-right: 25%;
+		}
+		@include desktop {
+			margin-right: 40%;
+		}
+		@include desktopXL {
+			margin-right: 50%;
+		}
+	}
+}
+
+.settings-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 10%;
+	margin-right: auto;
+	margin-left: auto;
+	select {
+		flex-basis: 100%;
+	}
+	select {
+		flex-basis: 90%;
+		border: 1px solid $grey-border;
+		border-radius: 5px;
+		background: $light-grey;
+		padding: 3%;
+		font-size: .8em;
+		color: $grey-text;
+		@include tablet {
+			margin-top: 6%;
+		}
+		@include desktopXL {
+			margin-top: 0;
+		}
+	}
+	button {
+		margin-top: 9%;
+		flex-basis: 45%;
+		font-family: $titillium;
+		border-radius: 5px;
+		padding: 3% 0;
+		font-size: .8em;
+		&:nth-of-type(1) {
+			border: 1px solid $main-violet;
+			background: $main-violet;
+			color: $white;
+		} 
+		&:nth-of-type(2) {
+			border: 1px solid $grey-background;
+			background: $grey-background;
+			color: $white;
+		}
+		@include tablet {
+			margin-top: 5%;
+		} 
+	}
+	@include desktop {
+		margin-top: 6%;
+	}
+	@include desktopXL {
+		margin-top: 12%;
+	}
 }

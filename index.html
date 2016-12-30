@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css" type="text/css" />
+		<link rel="stylesheet" href="css/auto-complete.css" type="text/css" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
 	</head>
 	<body>
@@ -13,15 +14,19 @@
 			<div class="user-top-bar">
 				<p class="app-logo"><strong>Your</strong>App™</p>
 				<ul class="user-profile">
-					<li><a href="#"><img class="bell-icon" src="icons/icon-bell.svg" alt="bell icon" /></a></li>
+					<li><a class="bell" href="#"><img class="bell-icon" src="icons/icon-bell.svg" alt="bell icon" /><span class="dot"></span></a></li>
 					<li><img class="user-picture" src="profile-pictures/sullivan.jpg" alt="Josh Sullivan Profile Picture"/></li>
 					<li><span class="username">Josh Sullivan</span><li>
 				</ul>
+				<div class="alert-overlay hidden">
+					<p><strong>Notification 01: </strong>Sam Raimi sed in faucibus in, commodo pede ultrices posuere vehicula non, tristique magna lorem pretium magna</p>
+					<p><strong>Notification 02: </strong> Michelle Adams donec non leo vel tortor. In pede. Vestibulum non eros.<p>
+				</div>
 			</div>
 			<div class="content-container">
 				<div class="left-vertical-bar">
 					<ul class="vertical-menu">
-						<li><a href="#"><img class="vertical-menu-icon" src="icons/icon-dashboard.svg" alt="icon presenting dashboard" /></a></li>
+						<li class="active-border"><a href="#"><img class="vertical-menu-icon active-icon" src="icons/icon-dashboard.svg" alt="icon presenting dashboard" /></a></li>
 						<li><a href="#"><img class="vertical-menu-icon" src="icons/icon-members.svg" alt="icon presenting members" /></a></li>
 						<li><a href="#"><img class="vertical-menu-icon" src="icons/icon-visits.svg" alt="icon presenting visits" /></a></li>
 						<li><a href="#"><img class="vertical-menu-icon" src="icons/icon-settings.svg" alt="icon presenting settings" /></a></li>
@@ -39,10 +44,10 @@
 					<p class="alert"><strong>Alert</strong> Quisque dapibus, odio nec porttitor convallis, erat massa egestas urna, non accumsan elit ligula nec lacus.<a href="#" class="close">x</a></p>
 					<div class="top-traffic-section">
 						<h2 class="section-name">TRAFFIC</h2>
-						<h2 class="traffic-period"><a href="#">Hourly</a></h2>
-						<h2 class="traffic-period"><a href="#">Daily</a></h2>
-						<h2 class="traffic-period"><a class="active-period" href="#">Weekly</a></h2>
-						<h2 class="traffic-period"><a href="#">Monthly</a></h2>
+						<h2><a class="time-period-button" href="#">Hourly</a></h2>
+						<h2><a class="time-period-button" href="#">Daily</a></h2>
+						<h2><a class="time-period-button active-period" href="#">Weekly</a></h2>
+						<h2><a class="time-period-button"href="#">Monthly</a></h2>
 						<div class="line-chart-container">
 							<canvas class="lineChart chart" id="lineChart"></canvas>
 						</div>
@@ -160,19 +165,45 @@
 					</div>
 					<div class="message-section">
 						<h2>MESSAGE USER</h2>
+						<p class="message-alert">Message was sent to the user!</p>
 						<form class="message-form" action="index.html" method="post">
-							<input class="search-field" type="text" name="user_name" placeholder="Search for user" />
-							<textarea class="message" placeholder="Message for user"></textarea>
-							<button type="submit">SEND</button>
+							<input class="search-field" id="search" type="text" name="user_name" placeholder="Search for user" />
+							<textarea id="user-message"class="message" placeholder="Message for user"></textarea>
+							<button id="message-submit" type="reset">SEND</button>
 						</form>
 					</div>
 					<div class="settings-section">
 						<h2>SETTINGS</h2>
+							<div class="email-notifications">
+								<span>Send Email Notifications</span>
+								<label class="switch">
+								  <input type="checkbox">
+								  <div class="slider round"></div>
+								</label>
+							</div>
+							<div class="public-profile">
+								<span>Set Profile to Public</span>
+								<label class="switch">
+								  <input type="checkbox" placeholder="ON">
+								  <div class="slider round"></div>
+								</label>
+							</div>
+							<form class="settings-form" action="index.html" method="post">
+								<select name="user_timezone">
+									<option value="" selected>Select Timezone</option>
+									<option value="Timezone01">Timezone 01</option>
+									<option value="Timezone02">Timezone 02</option>
+									<option value="Timezone03">Timezone 03</option>
+									<option value="Timezone04">Timezone 04</option>
+								</select>
+								<button type="submit">SAVE</button>
+								<button type="reset">CANCEL</button>
+							</form>
 					</div>
-				</div>
 			</div>
 		</div>
 		<script src="js/Chart.js" type="text/javascript"></script>
+		<script src="js/auto-complete.min.js" type="text/javascript"></script>
 		<script src="js/app.js" type="text/javascript"></script>
 	</body>
 </html>

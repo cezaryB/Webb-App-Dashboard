@@ -3,6 +3,20 @@
 	background: $active-period;
 	border-radius: 5px;
 	color: $white;
-	padding-left: 14%;
-	padding-right: 14%;
+}
+
+.active-border {
+	border-left: 2px solid $light-green;
+}
+
+.active-icon {
+	opacity: 1;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.show {
+	visibility: visible;
 }
