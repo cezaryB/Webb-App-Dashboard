@@ -282,7 +282,7 @@
 	padding-left: 0;
 	font-size: .8em;
 	@include tablet {
-		flex-wrap: no-wrap;
+		flex-wrap: nowrap;
 		justify-content: flex-start;
 	}
 	@include desktop {

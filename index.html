@@ -47,7 +47,7 @@
 						<h2><a class="time-period-button" href="#">Hourly</a></h2>
 						<h2><a class="time-period-button" href="#">Daily</a></h2>
 						<h2><a class="time-period-button active-period" href="#">Weekly</a></h2>
-						<h2><a class="time-period-button"href="#">Monthly</a></h2>
+						<h2><a class="time-period-button" href="#">Monthly</a></h2>
 						<div class="line-chart-container">
 							<canvas class="lineChart chart" id="lineChart"></canvas>
 						</div>
@@ -167,8 +167,8 @@
 						<h2>MESSAGE USER</h2>
 						<p class="message-alert">Message was sent to the user!</p>
 						<form class="message-form" action="index.html" method="post">
-							<input class="search-field" list="users" id="userSearch" type="text" name="user_name" placeholder="Search for user" />
-							<textarea id="user-message"class="message" placeholder="Message for user"></textarea>
+							<input class="search-field" id="userSearch" type="text" name="user_name" placeholder="Search for user" />
+							<textarea id="user-message" class="message" placeholder="Message for user"></textarea>
 							<button id="message-submit" type="reset">SEND</button>
 						</form>
 					</div>
@@ -178,14 +178,14 @@
 								<span>Send Email Notifications</span>
 								<label class="switch">
 								  <input id="email-switch" type="checkbox" />
-								  <div class="slider round"></div>
+								  <span class="slider round"></span>
 								</label>
 							</div>
 							<div class="public-profile">
 								<span>Set Profile to Public</span>
 								<label class="switch">
 								  <input id="profile-switch" type="checkbox" />
-								  <div class="slider round"></div>
+								  <span class="slider round"></span>
 								</label>
 							</div>
 							<form class="settings-form" action="index.html" method="post">
@@ -199,6 +199,7 @@
 								<button id="save-button" type="submit">SAVE</button>
 								<button id="reset-button" type="reset">CANCEL</button>
 							</form>
+						</div>
 					</div>
 			</div>
 		</div>

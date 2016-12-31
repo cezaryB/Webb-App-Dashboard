@@ -355,7 +355,7 @@ var resetButton = document.getElementById("reset-button");
 
 resetButton.addEventListener("click", function(){
     location.reload();
-    localStorage.clear()
+    localStorage.clear();
     emailNotifications.checked = false;
     publicProfile.checked = false;
-})
+});
