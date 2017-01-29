@@ -1,0 +1,14 @@
+.alert-overlay {
+	width: 250px;
+	height: 200px;
+	position: absolute;
+	top: 100%;
+	right: 12%;
+	background: $darker-violet;
+	border-radius: 5px;
+	z-index: 1;
+	text-align: center;
+	@include tablet {
+		right: 4%;
+	}
+}

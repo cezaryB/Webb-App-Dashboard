@@ -213,7 +213,7 @@ a {
       padding-bottom: 4%; } }
 
 .search {
-  padding: 3%;
+  padding: 5%;
   border: 0.1em solid #dfdfdf;
   border-radius: .3em; }
   @media (min-width: 768px) {
@@ -768,10 +768,13 @@ input:checked + .slider:before {
   height: 200px;
   position: absolute;
   top: 100%;
-  right: 4%;
+  right: 12%;
   background: #4d4c72;
   border-radius: 5px;
   z-index: 1;
   text-align: center; }
+  @media (min-width: 768px) {
+    .alert-overlay {
+      right: 4%; } }
 
 /*# sourceMappingURL=style.css.map */
